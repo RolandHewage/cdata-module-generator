@@ -20,23 +20,23 @@ jobs:
           BALLERINA_CENTRAL_ACCESS_TOKEN: ${{ secrets.BALLERINA_CENTRAL_ACCESS_TOKEN }}
           JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true
         run: |
-          ./gradlew build -P loadCdata=true -P release=true -P remote=true
-      - name: Create Pull Request For Updating Release Files
+          ./gradlew build -P loadCdata=true -P release=true
+      - name: Create Pull Request for Released Cdata Modules
         id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.BALLERINA_BOT_TOKEN }}
-          commit-message: Update file versions
+          commit-message: Add or update cdata modules
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: release/file-update
           base: test1
-          title: Update file versions
+          title: Add or Update CData Modules
           body: |
-            Update file versions
+            Add new cdata modules or update existing cdata modules
               - cdata.properties
-            Update Ballerina.toml version of the released connectors
+            Update Ballerina.toml version and release the connectors
           draft: false
       - name: PR details
         run: |
