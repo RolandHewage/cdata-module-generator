@@ -38,6 +38,7 @@ file("cdata.properties").withInputStream { props.load(it) }
 
 // Load CData packages
 List<String> cdataPackages = new ArrayList<>()
+println cdataPackageDirPath
 def dir = new File(cdataPackageDirPath)
 dir.eachDir {
     cdataPackages << it.name
