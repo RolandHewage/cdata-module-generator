@@ -1,7 +1,6 @@
 .gradle
 build
 **/target
-**/resources
 gen
 .idea
 *.log
