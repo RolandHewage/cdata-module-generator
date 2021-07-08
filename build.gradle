@@ -12,8 +12,8 @@ repositories {
 
 dependencies {}
 
-def ballerinaDistributionPath = System.getenv("BALLERINA_HOME")
 //def ballerinaDistributionPath = "/usr/lib/ballerina"
+def ballerinaDistributionPath = System.getenv("BALLERINA_HOME")
 String cdataDriverDirPath = project.projectDir.absolutePath + "/libs"
 String cdataPackageDirPath = project.projectDir.absolutePath + "/cdata"
 
@@ -99,10 +99,10 @@ task setUpEnvironment {
 
 task onetimeConnectorGeneration {
     if (loadCdata) {
-        // // Changing the build distribution to SL Beta1
-        // exec {
-        //     commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal dist use slbeta1"
-        // }
+        // Changing the build distribution to SL Beta1
+        exec {
+            commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal dist use slbeta1"
+        }
         newCdataPackages.each {
             String apiName = it
             // Create a new ballerina project
