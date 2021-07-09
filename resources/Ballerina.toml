@@ -1,6 +1,6 @@
 [package]
-org = "ballerinax"
-name = "cdata.${apiName}"
+org = "rolandhewage"
+name = "jack.${apiName}"
 version = "${version}"
 license= ["Apache-2.0"]
 authors = ["Ballerina"]
