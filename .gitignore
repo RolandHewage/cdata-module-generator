@@ -1,10 +1,7 @@
 .gradle
+.idea
 build
 **/target
-**/resources
-gen
-.idea
-*.log
 
 # Compiled class file
 *.class

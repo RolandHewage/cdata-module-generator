@@ -12,8 +12,8 @@ repositories {
 
 dependencies {}
 
-def ballerinaDistributionPath = System.getenv("BALLERINA_HOME")
 //def ballerinaDistributionPath = "/usr/lib/ballerina"
+def ballerinaDistributionPath = System.getenv("BALLERINA_HOME")
 String cdataDriverDirPath = project.projectDir.absolutePath + "/libs"
 String cdataPackageDirPath = project.projectDir.absolutePath + "/cdata"
 
@@ -60,10 +60,6 @@ task findNewCdataPackages {
                 newCdataPackages << apiName
             }
         }
-    }
-
-    newCdataPackages.each {
-        println it
     }
 }
 
