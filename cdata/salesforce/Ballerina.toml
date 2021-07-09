@@ -1,0 +1,10 @@
+[package]
+org = "sachiniranasinghe"
+name = "cdata.salesforce"
+version = "0.1.0"
+license= ["Apache-2.0"]
+authors = ["Ballerina"]
+keywords = ["CData","salesforce"]
+
+[[platform.java11.dependency]]
+path = "../../libs/cdata.jdbc.salesforce.jar"
