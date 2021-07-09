@@ -1,0 +1,10 @@
+[package]
+org = "sachiniranasinghe"
+name = "cdata.azuresynapse"
+version = "0.1.0"
+license= ["Apache-2.0"]
+authors = ["Ballerina"]
+keywords = ["CData","azuresynapse"]
+
+[[platform.java11.dependency]]
+path = "../../libs/cdata.jdbc.azuresynapse.jar"

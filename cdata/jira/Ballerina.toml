@@ -1,0 +1,10 @@
+[package]
+org = "sachiniranasinghe"
+name = "cdata.jira"
+version = "0.1.0"
+license= ["Apache-2.0"]
+authors = ["Ballerina"]
+keywords = ["CData","jira"]
+
+[[platform.java11.dependency]]
+path = "../../libs/cdata.jdbc.jira.jar"
