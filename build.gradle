@@ -210,3 +210,10 @@ task connectorRelease {
         }
     }
 }
+
+connectorRelease.dependsOn connectorBuild
+connectorBuild.dependsOn connectorGeneration
+connectorGeneration.dependsOn onetimeConnectorGeneration
+onetimeConnectorGeneration.dependsOn setUpEnvironment
+setUpEnvironment.dependsOn findUpdatedCdataPackages
+findUpdatedCdataPackages.dependsOn findNewCdataPackages
