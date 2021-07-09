@@ -187,7 +187,7 @@ task connectorRelease {
                 // Push the bala file to the Ballerina central local repository
                 exec {
                     workingDir "${cdataPackageDirPath}/${apiName}"
-                    commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal push --repository=local"
+                    commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal push"
                 }
             }
         } else {
@@ -196,7 +196,7 @@ task connectorRelease {
                 // Push the bala file to the Ballerina central local repository
                 exec {
                     workingDir "${cdataPackageDirPath}/${apiName}"
-                    commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal push --repository=local"
+                    commandLine 'sh', '-c', "${ballerinaDistributionPath}/bin/bal push"
                 }
                 def properties = new Properties()
                 file(cdataPackageDirPath + "/${it}/Ballerina.toml").withInputStream { properties.load(it) }
