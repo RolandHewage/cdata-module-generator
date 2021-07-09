@@ -31,7 +31,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: release/file-update
-          base: test2
+          base: test6
           title: Add or Update CData Modules
           body: |
             Add new cdata modules or update existing cdata modules
